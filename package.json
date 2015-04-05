@@ -1,6 +1,6 @@
 {
   "name": "schemes",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
   "main": "index.js",
   "scripts": {
