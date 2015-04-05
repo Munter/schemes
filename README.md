@@ -67,6 +67,11 @@ schemes.allByName; // {
                    // }
 ```
 
+Contributing
+------------
+
+Part of this module is auto generated from iana official lists, but the unofficial ones are not. If you find that a specific scheme is missing from these lists, please submit a pull request that adds it to the [unofficial schemes list](https://github.com/Munter/schemes/blob/master/lib/unofficial.json).
+
 
 License
 -------
