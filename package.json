@@ -1,7 +1,7 @@
 {
   "name": "schemes",
   "version": "0.0.0",
-  "description": "IANA Uniform Resource Identifier (URI) Schemes",
+  "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
