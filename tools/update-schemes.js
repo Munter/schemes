@@ -1,8 +1,16 @@
+'use strict';
+
 var fs = require('fs');
 var Path = require('path');
 var get = require('simple-get');
 var cheerio = require('cheerio');
+var chalk = require('chalk');
 
+var unofficial = require('../lib/unofficial.json');
+var unofficialMap = {};
+unofficial.forEach(function (item) {
+  unofficialMap[item.scheme] = item;
+});
 
 var sections = {
   'permanent': '#uri-schemes-1',
@@ -11,8 +19,6 @@ var sections = {
 };
 
 get.concat('http://www.iana.org/assignments/uri-schemes/uri-schemes.xml', function (err, data) {
-  'use strict';
-
   if (err) {
     throw err;
   }
@@ -50,10 +56,16 @@ get.concat('http://www.iana.org/assignments/uri-schemes/uri-schemes.xml', functi
         result.template = 'http://www.iana.org/assignments/uri-schemes/' + $(el).find('file[type="template"]').text();
       }
 
+      if (unofficialMap[result.scheme]) {
+        console.error(chalk.yellow('WARN: Duplicate scheme in unofficial schemes list: ' + result.scheme));
+        console.error(chalk.yellow('\t Already exists in iana ' + key + '\n'));
+      }
+
       return result;
     });
 
     var fileName = Path.join('lib', 'iana-' + key) + '.json';
+
     fs.writeFile(fileName, JSON.stringify(data, undefined, 2), function (err) {
       if (err) {
         throw err;
@@ -61,6 +73,5 @@ get.concat('http://www.iana.org/assignments/uri-schemes/uri-schemes.xml', functi
 
       console.log('Wrote ' + fileName + ': ' + data.length + ' entries');
     });
-    // console.log(JSON.stringify(data, undefined, 2));
   });
 });
