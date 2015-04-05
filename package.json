@@ -1,0 +1,29 @@
+{
+  "name": "schemes",
+  "version": "0.0.0",
+  "description": "IANA Uniform Resource Identifier (URI) Schemes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Munter/schemes.git"
+  },
+  "keywords": [
+    "iana",
+    "uri",
+    "url",
+    "scheme",
+    "schemes",
+    "protocol",
+    "protocols",
+    "rfc"
+  ],
+  "author": "Peter Müller <munter@fumle.dk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Munter/schemes/issues"
+  },
+  "homepage": "https://github.com/Munter/schemes"
+}
