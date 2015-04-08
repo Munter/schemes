@@ -1,5 +1,8 @@
 [
   {
     "scheme": "android-app"
+  },
+  {
+    "scheme": "webpack"
   }
 ]
