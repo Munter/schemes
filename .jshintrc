@@ -65,6 +65,7 @@
     "devel"         : false,     // Development/debugging (alert, confirm, etc)
     "dojo"          : false,    // Dojo Toolkit
     "jquery"        : false,     // jQuery
+    "mocha"         : true,     // Mocha
     "mootools"      : false,    // MooTools
     "node"          : true,    // Node.js
     "nonstandard"   : true,     // Widely adopted globals (escape, unescape, etc)

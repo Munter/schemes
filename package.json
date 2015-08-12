@@ -4,7 +4,7 @@
   "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "build": "node tools/update-schemes.js"
   },
   "files": [
@@ -34,9 +34,11 @@
   "devDependencies": {
     "chalk": "^1.0.0",
     "cheerio": "^0.19.0",
+    "mocha": "^2.2.5",
+    "should": "^7.0.3",
     "simple-get": "^1.3.1"
   },
   "dependencies": {
-    "extend": "^2.0.0"
+    "lodash": "^3.10.1"
   }
 }

@@ -1,28 +1,17 @@
 'use strict';
 
-var extend = require('extend');
-
+var _ = require('lodash');
 var data = {
   permanent: require('./lib/iana-permanent.json'),
-  provosional: require('./lib/iana-provisional.json'),
-  historical: require('./lib/iana-historical.json')
+  provisional: require('./lib/iana-provisional.json'),
+  historical: require('./lib/iana-historical.json'),
+  unofficial: require('./lib/unofficial.json')
 };
 
-var allByName = {};
-
-Object.keys(data).forEach(function (type) {
-  data[type].forEach(function (schemeObj) {
-    allByName[schemeObj.scheme] = extend(schemeObj, { type: type });
+data.allByName = _.transform(data, function(result, scheme, type) {
+  scheme.forEach(function(value) {
+    result[value.scheme] = _.defaults({ type: type }, value);
   });
 });
 
-data.unofficial = require('./lib/unofficial.json').filter(function (item) {
-  return !allByName[item.scheme];
-});
-
-data.unofficial.forEach(function (schemeObj) {
-  allByName[schemeObj.scheme] = extend(schemeObj, { type: 'unofficial' });
-});
-
-
-module.exports = extend(data, { allByName: allByName });
+module.exports = data;
