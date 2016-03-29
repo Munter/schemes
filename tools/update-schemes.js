@@ -26,7 +26,9 @@ get.concat('http://www.iana.org/assignments/uri-schemes/uri-schemes.xml', functi
     throw err;
   }
 
-  var $ = cheerio.load(data.toString());
+  var $ = cheerio.load(data.toString(), {
+    xmlMode: true
+  });
 
   $('record').each(function (idx, el) {
     var status = $(el).find('status').text().toLowerCase();
@@ -38,7 +40,7 @@ get.concat('http://www.iana.org/assignments/uri-schemes/uri-schemes.xml', functi
     var result = {
       scheme: $(el).find('value').text(),
       description: $(el).find('description').text(),
-      reference: Array.prototype.map.call($(el).find('xref:not([type="person"])'), function (el) {
+      reference: Array.prototype.map.call($(el).find('> xref:not([type="person"])'), function (el) {
         var type = $(el).attr('type');
         var href;
 
@@ -51,6 +53,7 @@ get.concat('http://www.iana.org/assignments/uri-schemes/uri-schemes.xml', functi
           href = 'http://www.iana.org/assignments/' + $(el).attr('data');
           break;
         default:
+          href = $(el).attr('data');
         }
 
         return {
