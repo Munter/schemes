@@ -4,8 +4,9 @@
   "description": "IANA Uniform Resource Identifier (URI) Schemes list, including crowd sourced unofficial ones",
   "main": "index.js",
   "scripts": {
-    "test": "jshint . --exclude .gitignore",
-    "build": "node tools/update-schemes.js"
+    "test": "jshint . --exclude-path .gitignore",
+    "build": "node tools/update-schemes.js",
+    "travis": "npm run test && npm run build"
   },
   "files": [
     "index.js",
