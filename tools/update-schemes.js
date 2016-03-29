@@ -16,7 +16,10 @@ unofficial.forEach(function (item) {
 });
 
 var sortFn = function (a, b) {
-  return a.scheme.toLowerCase() < b.scheme.toLowerCase();
+  a = a.scheme.toLowerCase();
+  b = b.scheme.toLowerCase();
+
+  return a === b ? 0 : a < b ? -1 : 1;
 };
 
 var sections = {};
@@ -77,16 +80,12 @@ get.concat('http://www.iana.org/assignments/uri-schemes/uri-schemes.xml', functi
 
   // Write out the results
   Object.keys(sections).forEach(function (key) {
-    var newRecords = sections[key];
-
-    newRecords.sort(sortFn);
+    var newRecords = sections[key].slice().sort(sortFn);
 
     var fileName = Path.join('lib', 'iana-' + key) + '.json';
 
     fs.readFile(fileName, 'utf8', function (err, data) {
-      var oldRecords = JSON.parse(data);
-
-      oldRecords.sort(sortFn);
+      var oldRecords = JSON.parse(data).sort(sortFn);
 
       var diff = arrayDiff(oldRecords, newRecords, 'scheme');
 
