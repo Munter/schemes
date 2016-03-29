@@ -5,12 +5,19 @@ var Path = require('path');
 var get = require('simple-get');
 var cheerio = require('cheerio');
 var chalk = require('chalk');
+var arrayDiff = require('simple-array-diff');
+var deepEqual = require('deep-equal');
+var keyBy = require('lodash.keyby');
 
 var unofficial = require('../lib/unofficial.json');
 var unofficialMap = {};
 unofficial.forEach(function (item) {
   unofficialMap[item.scheme] = item;
 });
+
+var sortFn = function (a, b) {
+  return a.scheme.toLowerCase() < b.scheme.toLowerCase();
+};
 
 var sections = {};
 
@@ -67,15 +74,58 @@ get.concat('http://www.iana.org/assignments/uri-schemes/uri-schemes.xml', functi
 
   // Write out the results
   Object.keys(sections).forEach(function (key) {
+    var newRecords = sections[key];
+
+    newRecords.sort(sortFn);
+
     var fileName = Path.join('lib', 'iana-' + key) + '.json';
 
-    fs.writeFile(fileName, JSON.stringify(sections[key], undefined, 2), function (err) {
-      if (err) {
-        throw err;
+    fs.readFile(fileName, 'utf8', function (err, data) {
+      var oldRecords = JSON.parse(data);
+
+      oldRecords.sort(sortFn);
+
+      var diff = arrayDiff(oldRecords, newRecords, 'scheme');
+
+      var diffLog = [chalk.underline(key) + ':'];
+
+      if (diff.added.length > 0) {
+        diffLog.push('\t' + chalk.green('Added') + ': ' + diff.added.map(function (record) { return record.scheme; }).join(', '));
       }
 
-      console.log('Wrote ' + fileName + ': ' + data.length + ' entries');
+      if (diff.removed.length > 0) {
+        diffLog.push('\t' + chalk.red('Removed') + ': ' + diff.removed.map(function (record) { return record.scheme; }).join(', '));
+      }
+
+
+      // Figure out what common schemes have updated properties
+      if (diff.common.length > 0) {
+        var oldMap = keyBy(oldRecords, 'scheme');
+        var newMap = keyBy(newRecords, 'scheme');
+
+        var updated = diff.common.filter(function (record) {
+          return !deepEqual(oldMap[record.scheme], newMap[record.scheme]);
+        });
+
+        if (updated.length > 0) {
+          diffLog.push('\t' + chalk.yellow('Updated') + ': ' + updated.map(function (record) { return record.scheme; }).join(', '));
+        }
+      }
+
+      if (diffLog.length === 1) {
+        diffLog.push('\tNo changes');
+      }
+
+
+      fs.writeFile(fileName, JSON.stringify(newRecords, undefined, 2), function (err) {
+        if (err) {
+          throw err;
+        }
+
+        console.log(diffLog.join('\n') + '\n');
+      });
     });
+
   });
 
 });
