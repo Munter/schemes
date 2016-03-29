@@ -44,8 +44,8 @@
     "description": "acct",
     "reference": [
       {
-        "type": "draft",
-        "href": "http://www.iana.org/go/RFC-ietf-appsawg-acct-uri-06"
+        "type": "rfc",
+        "href": "http://www.iana.org/go/rfc7565"
       }
     ]
   },
@@ -136,6 +136,16 @@
       {
         "type": "rfc",
         "href": "http://www.iana.org/go/rfc4501"
+      }
+    ]
+  },
+  {
+    "scheme": "example",
+    "description": "example",
+    "reference": [
+      {
+        "type": "rfc",
+        "href": "http://www.iana.org/go/rfc7595"
       }
     ]
   },
@@ -261,7 +271,7 @@
   },
   {
     "scheme": "info",
-    "description": "Information Assets with Identifiers in Public Namespaces",
+    "description": "Information Assets with Identifiers in Public Namespaces. \n       (section 3) defines an \"info\" registry \n        of public namespaces, which is maintained by NISO and can be accessed \n        from .",
     "reference": [
       {
         "type": "rfc",
@@ -310,6 +320,16 @@
     ]
   },
   {
+    "scheme": "iris.lwz",
+    "description": "iris.lwz",
+    "reference": [
+      {
+        "type": "rfc",
+        "href": "http://www.iana.org/go/rfc4993"
+      }
+    ]
+  },
+  {
     "scheme": "iris.xpc",
     "description": "iris.xpc",
     "reference": [
@@ -326,16 +346,6 @@
       {
         "type": "rfc",
         "href": "http://www.iana.org/go/rfc4992"
-      }
-    ]
-  },
-  {
-    "scheme": "iris.lwz",
-    "description": "iris.lwz",
-    "reference": [
-      {
-        "type": "rfc",
-        "href": "http://www.iana.org/go/rfc4993"
       }
     ]
   },
@@ -480,8 +490,8 @@
     "description": "PKCS#11",
     "reference": [
       {
-        "type": "draft",
-        "href": "http://www.iana.org/go/RFC-pechanec-pkcs11uri-21"
+        "type": "rfc",
+        "href": "http://www.iana.org/go/rfc7512"
       }
     ]
   },
@@ -725,22 +735,22 @@
     "template": "http://www.iana.org/assignments/uri-schemes/perm/thismessage"
   },
   {
-    "scheme": "tn3270",
-    "description": "Interactive 3270 emulation sessions",
-    "reference": [
-      {
-        "type": "rfc",
-        "href": "http://www.iana.org/go/rfc6270"
-      }
-    ]
-  },
-  {
     "scheme": "tip",
     "description": "Transaction Internet Protocol",
     "reference": [
       {
         "type": "rfc",
         "href": "http://www.iana.org/go/rfc2371"
+      }
+    ]
+  },
+  {
+    "scheme": "tn3270",
+    "description": "Interactive 3270 emulation sessions",
+    "reference": [
+      {
+        "type": "rfc",
+        "href": "http://www.iana.org/go/rfc6270"
       }
     ]
   },
@@ -795,6 +805,16 @@
       {
         "type": "rfc",
         "href": "http://www.iana.org/go/rfc2122"
+      }
+    ]
+  },
+  {
+    "scheme": "vnc",
+    "description": "Remote Framebuffer Protocol",
+    "reference": [
+      {
+        "type": "draft",
+        "href": "http://www.iana.org/go/RFC-warden-appsawg-vnc-scheme-10"
       }
     ]
   },

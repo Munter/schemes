@@ -34,6 +34,12 @@
     "template": "http://www.iana.org/assignments/uri-schemes/prov/aim"
   },
   {
+    "scheme": "appdata",
+    "description": "appdata",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/appdata"
+  },
+  {
     "scheme": "apt",
     "description": "apt",
     "reference": [],
@@ -68,6 +74,12 @@
     "description": "bitcoin",
     "reference": [],
     "template": "http://www.iana.org/assignments/uri-schemes/prov/bitcoin"
+  },
+  {
+    "scheme": "blob",
+    "description": "blob",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/blob"
   },
   {
     "scheme": "bolo",
@@ -112,16 +124,28 @@
     "template": "http://www.iana.org/assignments/uri-schemes/prov/cvs"
   },
   {
-    "scheme": "dlna-playsingle",
-    "description": "dlna-playsingle",
+    "scheme": "dis",
+    "description": "dis",
     "reference": [],
-    "template": "http://www.iana.org/assignments/uri-schemes/prov/dlna-playsingle"
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/dis"
   },
   {
     "scheme": "dlna-playcontainer",
     "description": "dlna-playcontainer",
     "reference": [],
     "template": "http://www.iana.org/assignments/uri-schemes/prov/dlna-playcontainer"
+  },
+  {
+    "scheme": "dlna-playsingle",
+    "description": "dlna-playsingle",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/dlna-playsingle"
+  },
+  {
+    "scheme": "dntp",
+    "description": "dntp",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/dntp"
   },
   {
     "scheme": "dtn",
@@ -230,6 +254,17 @@
     ]
   },
   {
+    "scheme": "iotdisco",
+    "description": "iotdisco",
+    "reference": [
+      {
+        "type": "uri",
+        "href": "http://www.iana.org/assignments/uri-schemes/prov/iotdisco.pdf"
+      }
+    ],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/iotdisco"
+  },
+  {
     "scheme": "ipn",
     "description": "ipn",
     "reference": [
@@ -256,6 +291,12 @@
     "description": "ircs",
     "reference": [],
     "template": "http://www.iana.org/assignments/uri-schemes/prov/ircs"
+  },
+  {
+    "scheme": "isostore",
+    "description": "isostore",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/isostore"
   },
   {
     "scheme": "itms",
@@ -328,16 +369,226 @@
     "template": "http://www.iana.org/assignments/uri-schemes/prov/mms"
   },
   {
+    "scheme": "ms-access",
+    "description": "ms-access",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-access"
+  },
+  {
+    "scheme": "ms-drive-to",
+    "description": "ms-drive-to",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-drive-to"
+  },
+  {
+    "scheme": "ms-enrollment",
+    "description": "ms-enrollment",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-enrollment"
+  },
+  {
+    "scheme": "ms-excel",
+    "description": "ms-excel",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-excel"
+  },
+  {
+    "scheme": "ms-getoffice",
+    "description": "ms-getoffice",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-getoffice"
+  },
+  {
     "scheme": "ms-help",
     "description": "ms-help",
     "reference": [],
     "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-help"
   },
   {
+    "scheme": "ms-infopath",
+    "description": "ms-infopath",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-infopath"
+  },
+  {
+    "scheme": "ms-media-stream-id",
+    "description": "ms-media-stream-id",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-media-stream-id"
+  },
+  {
+    "scheme": "ms-powerpoint",
+    "description": "ms-powerpoint",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-powerpoint"
+  },
+  {
+    "scheme": "ms-project",
+    "description": "ms-project",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-project"
+  },
+  {
+    "scheme": "ms-publisher",
+    "description": "ms-publisher",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-publisher"
+  },
+  {
+    "scheme": "ms-search-repair",
+    "description": "ms-search-repair",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-search-repair"
+  },
+  {
+    "scheme": "ms-secondary-screen-controller",
+    "description": "ms-secondary-screen-controller",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-secondary-screen-controller"
+  },
+  {
+    "scheme": "ms-secondary-screen-setup",
+    "description": "ms-secondary-screen-setup",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-secondary-screen-setup"
+  },
+  {
+    "scheme": "ms-settings",
+    "description": "ms-settings",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings"
+  },
+  {
+    "scheme": "ms-settings-airplanemode",
+    "description": "ms-settings-airplanemode",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-airplanemode"
+  },
+  {
+    "scheme": "ms-settings-bluetooth",
+    "description": "ms-settings-bluetooth",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-bluetooth"
+  },
+  {
+    "scheme": "ms-settings-camera",
+    "description": "ms-settings-camera",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-camera"
+  },
+  {
+    "scheme": "ms-settings-cellular",
+    "description": "ms-settings-cellular",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-cellular"
+  },
+  {
+    "scheme": "ms-settings-cloudstorage",
+    "description": "ms-settings-cloudstorage",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-cloudstorage"
+  },
+  {
+    "scheme": "ms-settings-emailandaccounts",
+    "description": "ms-settings-emailandaccounts",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-emailandaccounts"
+  },
+  {
+    "scheme": "ms-settings-language",
+    "description": "ms-settings-language",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-language"
+  },
+  {
+    "scheme": "ms-settings-location",
+    "description": "ms-settings-location",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-location"
+  },
+  {
+    "scheme": "ms-settings-lock",
+    "description": "ms-settings-lock",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-lock"
+  },
+  {
+    "scheme": "ms-settings-nfctransactions",
+    "description": "ms-settings-nfctransactions",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-nfctransactions"
+  },
+  {
+    "scheme": "ms-settings-notifications",
+    "description": "ms-settings-notifications",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-notifications"
+  },
+  {
     "scheme": "ms-settings-power",
     "description": "ms-settings-power",
     "reference": [],
     "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-power"
+  },
+  {
+    "scheme": "ms-settings-privacy",
+    "description": "ms-settings-privacy",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-privacy"
+  },
+  {
+    "scheme": "ms-settings-proximity",
+    "description": "ms-settings-proximity",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-proximity"
+  },
+  {
+    "scheme": "ms-settings-screenrotation",
+    "description": "ms-settings-screenrotation",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-screenrotation"
+  },
+  {
+    "scheme": "ms-settings-wifi",
+    "description": "ms-settings-wifi",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-wifi"
+  },
+  {
+    "scheme": "ms-settings-workplace",
+    "description": "ms-settings-workplace",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-workplace"
+  },
+  {
+    "scheme": "ms-spd",
+    "description": "ms-spd",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-spd"
+  },
+  {
+    "scheme": "ms-transit-to",
+    "description": "ms-transit-to",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-transit-to"
+  },
+  {
+    "scheme": "ms-visio",
+    "description": "ms-visio",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-visio"
+  },
+  {
+    "scheme": "ms-walk-to",
+    "description": "ms-walk-to",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-walk-to"
+  },
+  {
+    "scheme": "ms-word",
+    "description": "ms-word",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-word"
   },
   {
     "scheme": "msnim",
@@ -409,6 +660,18 @@
     "description": "query",
     "reference": [],
     "template": "http://www.iana.org/assignments/uri-schemes/prov/query"
+  },
+  {
+    "scheme": "redis",
+    "description": "redis",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/redis"
+  },
+  {
+    "scheme": "rediss",
+    "description": "rediss",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/rediss"
   },
   {
     "scheme": "res",
@@ -556,6 +819,12 @@
     "template": "http://www.iana.org/assignments/uri-schemes/prov/things"
   },
   {
+    "scheme": "tool",
+    "description": "tool",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/tool"
+  },
+  {
     "scheme": "udp",
     "description": "udp",
     "reference": [],
@@ -572,6 +841,17 @@
     "description": "ut2004",
     "reference": [],
     "template": "http://www.iana.org/assignments/uri-schemes/prov/ut2004"
+  },
+  {
+    "scheme": "v-event",
+    "description": "v-event",
+    "reference": [
+      {
+        "type": "draft",
+        "href": "http://www.iana.org/go/draft-menderico-v-event-uri"
+      }
+    ],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/v-event"
   },
   {
     "scheme": "ventrilo",

@@ -14,6 +14,12 @@
     ]
   },
   {
+    "scheme": "filesystem",
+    "description": "filesystem",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/historic/filesystem"
+  },
+  {
     "scheme": "mailserver",
     "description": "Access to data available from mail servers",
     "reference": [
