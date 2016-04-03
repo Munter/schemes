@@ -37,7 +37,7 @@
     "cheerio": "0.20.0",
     "deep-equal": "1.0.1",
     "jshint": "2.9.1",
-    "lodash.keyby": "4.2.1",
+    "lodash.keyby": "4.3.0",
     "simple-array-diff": "1.1.0",
     "simple-get": "2.0.0"
   },
