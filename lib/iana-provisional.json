@@ -489,6 +489,18 @@
     "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-cloudstorage"
   },
   {
+    "scheme": "ms-settings-connectabledevices",
+    "description": "ms-settings-connectabledevices",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-connectabledevices"
+  },
+  {
+    "scheme": "ms-settings-displays-topology",
+    "description": "ms-settings-displays-topology",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/ms-settings-displays-topology"
+  },
+  {
     "scheme": "ms-settings-emailandaccounts",
     "description": "ms-settings-emailandaccounts",
     "reference": [],
@@ -870,6 +882,12 @@
     "description": "webcal",
     "reference": [],
     "template": "http://www.iana.org/assignments/uri-schemes/prov/webcal"
+  },
+  {
+    "scheme": "wpid",
+    "description": "wpid",
+    "reference": [],
+    "template": "http://www.iana.org/assignments/uri-schemes/prov/wpid"
   },
   {
     "scheme": "wtai",
