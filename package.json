@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jshint . --exclude-path .gitignore",
     "build": "node tools/update-schemes.js",
-    "travis": "npm run test && npm run build"
+    "travis": "npm run test && npm run build",
+    "preversion": "npm run travis && git add lib"
   },
   "files": [
     "index.js",
