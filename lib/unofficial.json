@@ -4,5 +4,9 @@
   },
   {
     "scheme": "webpack"
+  },
+  {
+    "scheme": "s3",
+    "description": "Amazon Web Services S3 bucket"
   }
 ]
