@@ -8,5 +8,9 @@
   {
     "scheme": "s3",
     "description": "Amazon Web Services S3 bucket"
+  },
+  {
+    "scheme": "gs",
+    "description": "Google Cloud Storage"
   }
 ]
