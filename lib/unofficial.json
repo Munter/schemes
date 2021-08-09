@@ -12,5 +12,13 @@
   {
     "scheme": "gs",
     "description": "Google Cloud Storage"
+  },
+  {
+    "scheme": "mqtt",
+    "description": "Message Queuing Telemetry Transport Protocol"
+  },
+  {
+    "scheme": "modbus+tcp",
+    "description": "Modbus over TCP"
   }
 ]
